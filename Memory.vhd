@@ -1,0 +1,28 @@
+LIBRARY IEEE;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+ENTITY Memory IS
+    Port ( Clk   : in  STD_LOGIC;
+           Address : in  STD_LOGIC_VECTOR (7 downto 0);
+           WriteEn : in  STD_LOGIC;
+           DataIn  : in  STD_LOGIC_VECTOR (7 downto 0);
+           DataOut    : out STD_LOGIC_VECTOR (7 downto 0)
+);
+END Memory;
+
+architecture behavioral of Memory is
+    type mem_array is array (255 downto 0) of std_logic_vector(7 downto 0);
+    signal mem : mem_array := (others => (others => '0'));  -- Initialize memory to all zeros
+begin
+    process (Clk)
+    begin
+        if rising_edge(Clk) then
+            if WriteEn = '1' then
+                mem(conv_integer(Address)) <= DataIn;  -- Write data to memory
+            end if;
+            DataOut <= mem(conv_integer(Address));  -- Read data from memory
+        end if;
+    end process;
+end architecture behavioral;
+ 

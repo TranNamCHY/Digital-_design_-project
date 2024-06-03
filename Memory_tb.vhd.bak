@@ -1,0 +1,114 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.numeric_std.all;
+use IEEE.STD_LOGIC_TEXTIO.ALL;
+use std.textio.all;
+
+entity Memory_tb is
+end entity Memory_tb;
+
+architecture behavioral of Memory_tb is
+
+    -- Component Declaration for the memory
+    component Memory
+        Port ( Clk   : in  STD_LOGIC;
+           Address : in  STD_LOGIC_VECTOR (7 downto 0);
+           WriteEn : in  STD_LOGIC;
+           DataIn  : in  STD_LOGIC_VECTOR (7 downto 0);
+           DataOut    : out STD_LOGIC_VECTOR (7 downto 0));
+    end component;
+
+    -- Signals to connect to the memory component
+    signal Clk    : std_logic := '0';
+    signal WriteEn     : std_logic := '0';
+    signal Address   : std_logic_vector(7 downto 0) := (others => '0');
+    signal DataIn  : std_logic_vector(7 downto 0) := (others => '0');
+    signal DataOut : std_logic_vector(7 downto 0);
+    file input_file : text open read_mode is "test.txt";
+    -- Function to convert std_logic_vector to string for display
+    function std_logic_vector_to_string(vector: std_logic_vector) return string is
+        variable result : string(1 to vector'length);
+    begin
+        for i in vector'range loop
+            if vector(i) = '1' then
+                result(i+1) := '1';
+            else
+                result(i+1) := '0';
+            end if;
+        end loop;
+        return result;
+    end function;
+    -- Clock period definition
+    constant clk_period : time := 10 ns;
+
+begin
+    -- Instantiate the memory component
+    uut: Memory
+        port map (
+            Clk    => Clk,
+            WriteEn     => WriteEn,
+            Address   => Address,
+            DataIn  => DataIn,
+            DataOut => DataOut
+        );
+
+    -- Clock process definitions
+    clk_process : process
+    begin
+        Clk <= '0';
+        wait for clk_period/2;
+        Clk <= '1';
+        wait for clk_period/2;
+    end process;
+
+    test: process
+	variable line_buffer : line;
+	variable size: integer;
+	variable data_buffer : std_logic_vector(7 downto 0);
+	variable str : string(1 to 8);
+    begin
+	size:= 0;
+	Address <= "00000000";
+        -- Read lines from the file until end of file
+        while not endfile(input_file) loop
+            WriteEn <= '0';
+            readline(input_file, line_buffer);
+	    read(line_buffer, str);
+             -- Convert string to std_logic_vector
+            for i in 0 to 7 loop
+                if str(i+1) = '0' then
+                    data_buffer(7-i) := '0';
+                elsif str(i+1) = '1' then
+                    data_buffer(7-i) := '1';
+                else
+                    data_buffer(i) := '0'; -- Default case for non-binary characters
+                end if;
+            end loop;
+	    report std_logic_vector_to_string(data_buffer);
+	    size:= size + 1;
+	    DataIn <= data_buffer;
+	    WriteEn <= '1';
+            wait until rising_edge(Clk);
+	    Address <= Address + "00000001";
+            -- Apply the data to the signal and wait for one clock cycle
+        end loop;
+
+
+	WriteEn <= '0';
+	Address <= "00000000";
+
+	for i in 0 to size loop
+            wait until rising_edge(Clk);
+	    Address <= Address + "00000001";
+            -- Apply the data to the signal and wait for one clock cycle
+        end loop;
+        -- Close the file and end the simulation
+        file_close(input_file);
+
+	wait;
+    end process;
+
+end architecture behavioral;
+

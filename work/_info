@@ -1,0 +1,476 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1/simulation/modelsim
+Eadder
+Z0 w1717065443
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 201
+Z3 dE:/Digital _design_ project
+Z4 8E:/Digital _design_ project/Adder.vhd
+Z5 FE:/Digital _design_ project/Adder.vhd
+l0
+L4 1
+Vk;@5QDEfYIX5lImD[l?Bm1
+!s100 h[]2Y;<`hMV<Q_Gf__jbz3
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1717404910
+!i10b 1
+Z8 !s108 1717404910.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Digital _design_ project/Adder.vhd|
+Z10 !s107 E:/Digital _design_ project/Adder.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+DEx4 work 5 adder 0 22 k;@5QDEfYIX5lImD[l?Bm1
+!i122 201
+l13
+L12 5
+Vn9]PUYgiS56W2C5CJbQe61
+!s100 97gTL4EaPh`EI2N4@NnYB1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Econtroller
+Z13 w1717323872
+Z14 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R1
+R2
+!i122 205
+R3
+Z16 8E:/Digital _design_ project/Controller.vhd
+Z17 FE:/Digital _design_ project/Controller.vhd
+l0
+L6 1
+VI2YbgHQFJ:2:FlLjPa^8B1
+!s100 ERF4g?b<FNl9=UZ=`cnRU1
+R6
+32
+R7
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Digital _design_ project/Controller.vhd|
+Z19 !s107 E:/Digital _design_ project/Controller.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R14
+R15
+R1
+R2
+DEx4 work 10 controller 0 22 I2YbgHQFJ:2:FlLjPa^8B1
+!i122 205
+l21
+L16 142
+V>SI10=F5BP[`VG>]AzPGD2
+!s100 C2EZ170nRXmnK6o=<K=M@3
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
+Econtroller_tb
+Z20 w1717345055
+Z21 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z22 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R14
+R15
+R1
+R2
+!i122 206
+R3
+Z23 8E:\Digital _design_ project\Controller_tb.vhd
+Z24 FE:\Digital _design_ project\Controller_tb.vhd
+l0
+L8 1
+VZ<CMG=0?Zgm6;iV9Uo7^_3
+!s100 :8WZ@mhcYa@NSV4zF^cjJ1
+R6
+32
+Z25 !s110 1717404911
+!i10b 1
+Z26 !s108 1717404911.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:\Digital _design_ project\Controller_tb.vhd|
+Z28 !s107 E:\Digital _design_ project\Controller_tb.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R21
+R22
+R14
+R15
+R1
+R2
+Z29 DEx4 work 13 controller_tb 0 22 Z<CMG=0?Zgm6;iV9Uo7^_3
+!i122 206
+l51
+Z30 L11 269
+Z31 VJbYWAN[:Z]Z;C@hHLA8g21
+Z32 !s100 12B3^i@G4@mX<c0K4fkT93
+R6
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R11
+R12
+Efulladder
+w1717065741
+R1
+R2
+!i122 40
+R3
+8E:/Digital _design_ project/FullAdder.vhd
+FE:/Digital _design_ project/FullAdder.vhd
+l0
+L4 1
+VP^4ma50i3e]JPW=IP3Zz?2
+!s100 EMBl;FbJ5Y;7beAXUR@QN2
+R6
+32
+!s110 1717170485
+!i10b 1
+!s108 1717170485.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Digital _design_ project/FullAdder.vhd|
+!s107 E:/Digital _design_ project/FullAdder.vhd|
+!i113 1
+R11
+R12
+Ememory
+Z33 w1717170146
+R15
+R14
+R1
+R2
+!i122 199
+R3
+Z34 8E:/Digital _design_ project/Memory.vhd
+Z35 FE:/Digital _design_ project/Memory.vhd
+l0
+L5 1
+VnG=n;Lo63J8L:JH_6n0e@3
+!s100 SEMicDNFfmWD7do]jTfkX0
+R6
+32
+R7
+!i10b 1
+R8
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Digital _design_ project/Memory.vhd|
+Z37 !s107 E:/Digital _design_ project/Memory.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R15
+R14
+R1
+R2
+DEx4 work 6 memory 0 22 nG=n;Lo63J8L:JH_6n0e@3
+!i122 199
+l17
+L14 14
+V5Tgi4^L7@9nOz];hZ4z0@0
+!s100 TAiCF?aE6a@^=[gm>B_TG1
+R6
+32
+R7
+!i10b 1
+R8
+R36
+R37
+!i113 1
+R11
+R12
+Artl
+R14
+R15
+R1
+R2
+DEx4 work 6 memory 0 22 Wgkcn2I2O[W?4Y^a6UT7i1
+!i122 21
+l19
+L16 17
+VNdVUV]c:QI^I35oom141f1
+!s100 Td;zMj:oc1:<JinH1oVHN3
+R6
+32
+!s110 1717064127
+!i10b 1
+!s108 1717064127.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:\Digital _design_ project\Memory.vhd|
+!s107 E:\Digital _design_ project\Memory.vhd|
+!i113 1
+R11
+R12
+w1717063459
+FE:\Digital _design_ project\Memory.vhd
+8E:\Digital _design_ project\Memory.vhd
+Ememory_tb
+Z38 w1717404892
+R21
+R22
+R14
+R15
+R1
+R2
+!i122 200
+R3
+Z39 8E:\Digital _design_ project\Memory_tb.vhd
+Z40 FE:\Digital _design_ project\Memory_tb.vhd
+l0
+L9 1
+VgdNfGo]2^_:6aXFLG6BXM1
+!s100 :`EQP54hAZ>HczaAQQCH00
+R6
+32
+R7
+!i10b 1
+R8
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:\Digital _design_ project\Memory_tb.vhd|
+Z42 !s107 E:\Digital _design_ project\Memory_tb.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R21
+R22
+R14
+R15
+R1
+R2
+DEx4 work 9 memory_tb 0 22 gdNfGo]2^_:6aXFLG6BXM1
+!i122 200
+l46
+L12 102
+VZ@d`_ZIihOmoH9]=YMTz;2
+!s100 2fK<JDjE[]]hjRSe:;0AA2
+R6
+32
+R7
+!i10b 1
+R8
+R41
+R42
+!i113 1
+R11
+R12
+Emux2
+Z43 w1717241935
+R1
+R2
+!i122 202
+R3
+Z44 8E:/Digital _design_ project/Mux2.vhd
+Z45 FE:/Digital _design_ project/Mux2.vhd
+l0
+L5 1
+VbM5Ch]ZBTASejQD0=n4_91
+!s100 j`oHY>d5E<3SiPd]=L;]J3
+R6
+32
+R7
+!i10b 1
+R8
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Digital _design_ project/Mux2.vhd|
+Z47 !s107 E:/Digital _design_ project/Mux2.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 4 mux2 0 22 bM5Ch]ZBTASejQD0=n4_91
+!i122 202
+l17
+L16 6
+VFUF<;S=]ia2VK>M?UVZDi1
+!s100 ;Dcc=n8AL18C7PMEaY@Td2
+R6
+32
+R7
+!i10b 1
+R8
+R46
+R47
+!i113 1
+R11
+R12
+Emux4
+Z48 w1717241907
+R1
+R2
+!i122 203
+R3
+Z49 8E:/Digital _design_ project/Mux4.vhd
+Z50 FE:/Digital _design_ project/Mux4.vhd
+l0
+L5 1
+VoRFnUGoA95ZXJSMQn?=F82
+!s100 8BaR:EYQR]jEQCLj:0LJU3
+R6
+32
+R7
+!i10b 1
+R8
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Digital _design_ project/Mux4.vhd|
+Z52 !s107 E:/Digital _design_ project/Mux4.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 4 mux4 0 22 oRFnUGoA95ZXJSMQn?=F82
+!i122 203
+l19
+L18 8
+V3U6aVl[dYV05`bj;hEOU@2
+!s100 NF7j`K>HL36TJ1l9d=NfW1
+R6
+32
+R7
+!i10b 1
+R8
+R51
+R52
+!i113 1
+R11
+R12
+Ereg
+Z53 w1717168260
+R1
+R2
+!i122 198
+R3
+Z54 8E:/Digital _design_ project/Reg.vhd
+Z55 FE:/Digital _design_ project/Reg.vhd
+l0
+L4 1
+VPK?<F48K<`gRg<ghCEVMl0
+!s100 c9P[3z0_;>G_nTe=nD:EG3
+R6
+32
+R7
+!i10b 1
+R8
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Digital _design_ project/Reg.vhd|
+Z57 !s107 E:/Digital _design_ project/Reg.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 3 reg 0 22 PK?<F48K<`gRg<ghCEVMl0
+!i122 198
+l15
+L14 13
+VjR`knSHodQe8zCFE_KedA1
+!s100 l<S:4lcIz=<Y?bN?TlU]J0
+R6
+32
+R7
+!i10b 1
+R8
+R56
+R57
+!i113 1
+R11
+R12
+Etb_memory
+Z58 w1717170369
+R15
+R14
+R1
+R2
+!i122 34
+R3
+R39
+R40
+l0
+L5 1
+V8od2UT0Nio6Xd^FY4Vl812
+!s100 Pk:D1;LK69J4>g3gTGH?P1
+R6
+32
+Z59 !s110 1717170376
+!i10b 1
+Z60 !s108 1717170376.000000
+R41
+R42
+!i113 1
+R11
+R12
+Abehavioral
+R15
+R14
+R1
+R2
+DEx4 work 9 tb_memory 0 22 8od2UT0Nio6Xd^FY4Vl812
+!i122 34
+l29
+L8 115
+V0hjLljknCJF6;@QBMKa<h0
+!s100 QShF0En?P?BB9BQo1C7in0
+R6
+32
+R59
+!i10b 1
+R60
+R41
+R42
+!i113 1
+R11
+R12
+Etb_mux2to1
+w1717242030
+R1
+R2
+!i122 204
+R3
+8E:/Digital _design_ project/tb_mux2to1.vhd
+FE:/Digital _design_ project/tb_mux2to1.vhd
+l0
+L5 1
+VT55jm6MI[7;c38c91L;zC1
+!s100 Fm:;?k`OKonMmOSc>XZYh0
+R6
+32
+R7
+!i10b 1
+R8
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/Digital _design_ project/tb_mux2to1.vhd|
+!s107 E:/Digital _design_ project/tb_mux2to1.vhd|
+!i113 1
+R11
+R12
