@@ -1,10 +1,14 @@
-{E:/Digital _design_ project/Reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Reg.vhd}
+{E:/Digital _design_ project/Memory_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:\Digital _design_ project\Memory_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity Reg
--- Compiling architecture RTL of Reg
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity Memory_tb
+-- Compiling architecture behavioral of Memory_tb
 
 } {} {}} {E:/Digital _design_ project/Mux4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Mux4.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -62,15 +66,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity Memory
 -- Compiling architecture behavioral of Memory
-
-} {} {}} {E:/Digital _design_ project/tb_mux2to1.vhd} {0 {vcom -work work -2002 -explicit -stats=none {E:\Digital _design_ project\tb_mux2to1.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity tb_mux2to1
--- Compiling architecture Behavioral of tb_mux2to1
-** Error (suppressible): E:\Digital _design_ project\tb_mux2to1.vhd(29): (vcom-1141) Identifier "mux2to1" does not identify a component declaration.
-** Note: E:\Digital _design_ project\tb_mux2to1.vhd(80): VHDL Compiler exiting
 
 } {} {}}
