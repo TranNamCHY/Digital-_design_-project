@@ -1,0 +1,81 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.numeric_std.all;
+use IEEE.STD_LOGIC_TEXTIO.ALL;
+use std.textio.all;
+
+entity mux_tb is
+end entity mux_tb;
+
+architecture behavioral of mux_tb is
+
+    -- Component Declaration for the memory
+    component Mux2
+    GENERIC ( N : Integer := 8);
+    Port (
+        D0     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);  -- Input A
+        D1     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);  -- Input B
+        S   : in  STD_LOGIC;  -- Select signal
+        Y     : out STD_LOGIC_VECTOR ( N - 1 downto 0)  -- Output Y
+    );
+    end component;
+
+    component Mux4
+    GENERIC ( N : Integer := 8);
+    Port (
+        D0     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);
+        D1     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);
+        D2     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);
+        D3     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);
+        S   : in  STD_LOGIC_VECTOR( 1 downto 0 );  -- Select signal
+        Y     : out STD_LOGIC_VECTOR ( N - 1 downto 0)  -- Output Y
+    );
+    end component;
+    -- Signals to connect to the memory component
+    signal Clk    : std_logic := '0';
+    signal Y,D0,D1,D2,D3 : std_logic_vector(7 downto 0);
+    signal S : std_logic_vector(1 downto 0);
+    -- Clock period definition
+    constant clk_period : time := 10 ns;
+
+begin
+    -- Instantiate the memory component
+    uut: Mux4
+        port map (
+            D0     => D0,
+            D1   => D1,
+	    D2 => D2,
+	    D3 => D3,
+            S  => S,
+            Y => Y
+        );
+
+    -- Clock process definitions
+    clk_process : process
+    begin
+        Clk <= '0';
+        wait for clk_period/2;
+        Clk <= '1';
+        wait for clk_period/2;
+    end process;
+
+    test: process
+    begin
+	D0 <= "00000000";
+	D1 <= "11111111";
+	D2 <= "00001111";
+	D3 <= "11110000";
+	S <= "00";
+	wait until rising_edge(Clk);
+	S <= "01";
+	wait until rising_edge(Clk);
+	S <= "10";
+	wait until rising_edge(Clk);
+	S <= "11";
+	wait until rising_edge(Clk);
+	wait;
+    end process;
+
+end architecture behavioral;
