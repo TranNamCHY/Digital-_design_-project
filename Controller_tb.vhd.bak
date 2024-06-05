@@ -207,7 +207,9 @@ begin
 	WriteEn <= '0';
 	AddressIn <= "00000000";
 	AddressOut <= "01100100";
-	N <= "00000110";
+	--N <= "00001001";
+	N <= std_logic_vector(to_unsigned(size, N'length));
+
 	--Address <= MemAddress;
 	wait for clk_period;
 	wait for 2 ns;
@@ -221,7 +223,11 @@ begin
 	wait until rising_edge(Clk);
 	Select_Write_Enable <= '0';
 	WriteEn <= '0';
-	
+	wait for clk_period;
+	--Write to output.txt	
+	write(line_buffer,std_logic_vector_to_string(DataOut));
+	writeline(output_file,line_buffer);
+	file_close(output_file);
 	wait;
     end process;
 end architecture behavioral;
