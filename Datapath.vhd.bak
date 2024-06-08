@@ -77,7 +77,6 @@ BEGIN
                 S => AddressSrc, Y => MemAddress);
     value_reg: Reg PORT MAP (Clk => Clk, Reset => Reset,
                 Enable => ValueWriteEn, D => DataOut, Q => Value);
-    TestValue <= Value;
     alua_mux: Mux4 PORT MAP (D0 => Index, D1 => AddrIn,
                 D2 => Max, D3 => Value, S => ALUSrcA, Y => ALUA);
     alub_mux: Mux4 PORT MAP (D0 => N, D1 => "00000001",

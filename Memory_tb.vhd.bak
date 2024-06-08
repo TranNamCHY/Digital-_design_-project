@@ -20,6 +20,14 @@ architecture behavioral of Memory_tb is
            DataOut    : out STD_LOGIC_VECTOR (7 downto 0));
     end component;
 
+    component max_diff
+    Port ( Clk,Reset,Start   : in  STD_LOGIC;
+           N,DataOut : in  STD_LOGIC_VECTOR (7 downto 0);
+           AddressOut,AddressIn : in  STD_LOGIC_VECTOR (7 downto 0);
+           Done ,ResultWriteEn: out  STD_LOGIC;
+	   MemAddress, ALUResult: out  STD_LOGIC_VECTOR (7 downto 0));
+    end component;
+
     -- Signals to connect to the memory component
     signal Clk    : std_logic := '0';
     signal WriteEn     : std_logic := '0';
@@ -27,7 +35,15 @@ architecture behavioral of Memory_tb is
     signal DataIn  : std_logic_vector(7 downto 0) := (others => '0');
     signal DataOut : std_logic_vector(7 downto 0);
     file input_file : text open read_mode is "test.txt";
-    -- Function to convert std_logic_vector to string for display
+    
+    -- this section define signal to connect between max_diff and memory
+    signal Reset,Start : STD_LOGIC;
+    signal N : STD_LOGIC_VECTOR (7 downto 0);
+    signal AddressOut,AddressIn : STD_LOGIC_VECTOR (7 downto 0);
+    signal Done ,ResultWriteEn: STD_LOGIC;
+    signal MemAddress, ALUResult:STD_LOGIC_VECTOR (7 downto 0);
+
+    -- Function to convert std_logic_vector to string for display, dont need care about it
     function std_logic_vector_to_string(vector: std_logic_vector) return string is
         variable result : string(1 to vector'length);
     begin
@@ -40,12 +56,13 @@ architecture behavioral of Memory_tb is
         end loop;
         return result;
     end function;
+
     -- Clock period definition
     constant clk_period : time := 10 ns;
 
 begin
     -- Instantiate the memory component
-    uut: Memory
+    mmemory: Memory
         port map (
             Clk    => Clk,
             WriteEn     => WriteEn,
@@ -54,6 +71,14 @@ begin
             DataOut => DataOut
         );
 
+    maxdiff: max_diff
+        port map (
+           Clk,Reset,Start,
+           N,DataOut,
+           AddressOut,AddressIn,
+           Done ,ResultWriteEn,
+	   MemAddress, ALUResult
+        );
     -- Clock process definitions
     clk_process : process
     begin
@@ -83,7 +108,7 @@ begin
                 elsif str(i+1) = '1' then
                     data_buffer(7-i) := '1';
                 else
-                    data_buffer(i) := '0'; -- Default case for non-binary characters
+                    data_buffer(7-i) := '0'; -- Default case for non-binary characters
                 end if;
             end loop;
 	    report std_logic_vector_to_string(data_buffer);
@@ -94,19 +119,22 @@ begin
 	    Address <= Address + "00000001";
             -- Apply the data to the signal and wait for one clock cycle
         end loop;
-
-
-	WriteEn <= '0';
-	Address <= "00000000";
-
-	for i in 0 to size loop
-            wait until rising_edge(Clk);
-	    Address <= Address + "00000001";
-            -- Apply the data to the signal and wait for one clock cycle
-        end loop;
-        -- Close the file and end the simulation
         file_close(input_file);
+	-- Compelete pushing all data from text file to memory
 
+	-- Set up before starting algothirm
+	WriteEn <= '0';
+	Reset <= '1';
+	Start <= '0';
+	N <= "00000100";
+	AddressIn <= "00000000";
+	AddressOut <= "00000111";
+	Address <= MemAddress;
+	wait until rising_edge(Clk);
+	wait for 2 ns;
+	Start <= '1';
+	-- Algothirm start here
+	wait until rising_edg(Done);
 	wait;
     end process;
 

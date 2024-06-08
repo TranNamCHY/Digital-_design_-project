@@ -1,4 +1,4 @@
-{E:/Digital _design_ project/Memory_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:\Digital _design_ project\Memory_tb.vhd}
+{E:/Digital _design_ project/Memory_tb.vhd} {0 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Memory_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -9,6 +9,26 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package std_logic_textio
 -- Compiling entity Memory_tb
 -- Compiling architecture behavioral of Memory_tb
+** Error: E:/Digital _design_ project/Memory_tb.vhd(137): (vcom-1136) Unknown identifier "rising_edg".
+** Note: E:/Digital _design_ project/Memory_tb.vhd(142): VHDL Compiler exiting
+
+} {12.0 13.0} {}} {E:/Digital _design_ project/max_diff.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/max_diff.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity max_diff
+-- Compiling architecture structural of max_diff
+
+} {} {}} {E:/Digital _design_ project/Reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Reg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Reg
+-- Compiling architecture RTL of Reg
 
 } {} {}} {E:/Digital _design_ project/Mux4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Mux4.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -18,13 +38,99 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Mux4
 -- Compiling architecture Dataflow of Mux4
 
-} {} {}} {E:/Digital _design_ project/Adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Adder.vhd}
+} {} {}} {E:/Digital _design_ project/Datapath.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Datapath.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity Adder
--- Compiling architecture RTL of Adder
+-- Compiling entity Datapath
+-- Compiling architecture Structural of Datapath
+
+} {} {}} {E:/Digital _design_ project/mux_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/mux_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity mux_tb
+-- Compiling architecture behavioral of mux_tb
+
+} {} {}} {E:/Digital _design_ project/Controller_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:\Digital _design_ project\Controller_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity Controller_tb
+-- Compiling architecture behavioral of Controller_tb
+
+} {} {}} {E:/Digital _design_ project/memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Memory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Memory
+-- Compiling architecture behavioral of Memory
+
+} {} {}} {E:/Digital _design_ project/HalfAdder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/HalfAdder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity HalfAdder
+-- Compiling architecture Dataflow of HalfAdder
+
+} {} {}} {E:/Digital _design_ project/reg_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/reg_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity reg_tb
+-- Compiling architecture behavioral of reg_tb
+
+} {} {}} {E:/Digital _design_ project/Adder8.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Adder8.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Adder8
+-- Compiling architecture Structural of Adder8
+
+} {} {}} {E:/Digital _design_ project/ALU.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/ALU.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU
+-- Compiling architecture Structural of ALU
+
+} {} {}} {E:/Digital _design_ project/Mux1bit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Mux1bit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux1bit
+-- Compiling architecture Dataflow of Mux1bit
+
+} {} {}} {E:/Digital _design_ project/FullAdder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/FullAdder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FullAdder
+-- Compiling architecture Structural of FullAdder
 
 } {} {}} {E:/Digital _design_ project/Mux2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Mux2.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -43,28 +149,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity Controller
 -- Compiling architecture Behavioral of Controller
-
-} {} {}} {E:/Digital _design_ project/Controller_tb.vhd} {2 {vcom -work work -2002 -explicit -stats=none {E:\Digital _design_ project\Controller_tb.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Compiling entity Controller_tb
--- Compiling architecture behavioral of Controller_tb
-** Warning: E:\Digital _design_ project\Controller_tb.vhd(32): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-
-} {} {}} {E:/Digital _design_ project/memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {E:/Digital _design_ project/Memory.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity Memory
--- Compiling architecture behavioral of Memory
 
 } {} {}}

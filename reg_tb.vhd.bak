@@ -1,0 +1,66 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.numeric_std.all;
+use IEEE.STD_LOGIC_TEXTIO.ALL;
+use std.textio.all;
+
+entity reg_tb is
+end entity reg_tb;
+
+architecture behavioral of reg_tb is
+
+    -- Component Declaration for the memory
+    component Reg
+	GENERIC ( DATA_WIDTH : Integer := 8);
+        PORT (
+	Reset,Clk : IN STD_LOGIC;
+	Enable : IN STD_LOGIC;
+	D : IN STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
+ 	Q : OUT STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0)
+ );
+    end component;
+
+    -- Signals to connect to the memory component
+    signal Clk    : std_logic := '0';
+    signal Reset,Enable     : std_logic := '0';
+    signal D : std_logic_vector(7 downto 0) := (others => '0');
+    signal Q : std_logic_vector(7 downto 0);
+    -- Clock period definition
+    constant clk_period : time := 10 ns;
+
+begin
+    -- Instantiate the memory component
+    uut: Reg
+        port map (
+            Clk    => Clk,
+            Reset     => Reset,
+            D   => D,
+            Q  => Q,
+            Enable => Enable
+        );
+
+    -- Clock process definitions
+    clk_process : process
+    begin
+        Clk <= '0';
+        wait for clk_period/2;
+        Clk <= '1';
+        wait for clk_period/2;
+    end process;
+
+    test: process
+	variable line_buffer : line;
+	variable size: integer;
+	variable data_buffer : std_logic_vector(7 downto 0);
+	variable str : string(1 to 8);
+    begin
+	Enable <= '1';
+	D <= "10101010";
+	Reset <= '0';
+	wait until rising_edge(Clk);
+	wait;
+    end process;
+
+end architecture behavioral;
