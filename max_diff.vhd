@@ -15,7 +15,7 @@ architecture structural of max_diff is
         Port (
         Clk : in STD_LOGIC;
         Reset : in STD_LOGIC;
-        Start,Lt : in STD_LOGIC;
+        Start, Lt, Lo : in STD_LOGIC;
         MaxWriteEn, MaxSrc, MinWriteEn, MinSrc, ValueWriteEn,IndexSrc, IndexWriteEn,AddrInWriteEn,AddrInSrc, AddressSrc, ALUOp : out STD_LOGIC;
         Done, ResultWriteEn : out STD_LOGIC;
         ALUSrcA, ALUSrcB : out std_logic_vector ( 1 downto 0)
@@ -29,23 +29,19 @@ architecture structural of max_diff is
           AddressSrc, ALUOp: IN STD_LOGIC;
           ALUSrcA, ALUSrcB: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
           AddressIn, AddressOut, N, DataOut: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-          Lt: OUT STD_LOGIC;
+          Lt, Lo: OUT STD_LOGIC;
           ALUResult, MemAddress: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
     END component;
 
-        signal Lt : STD_LOGIC;
+        signal Lt, Lo : STD_LOGIC;
         signal MaxWriteEn, MaxSrc, MinWriteEn, MinSrc, ValueWriteEn,IndexSrc, IndexWriteEn,AddrInWriteEn,AddrInSrc, AddressSrc, ALUOp : STD_LOGIC;
-        --signal ResultWriteEn : STD_LOGIC;
         signal ALUSrcA, ALUSrcB : std_logic_vector ( 1 downto 0);
-	--signal DataOut : STD_LOGIC_VECTOR (7 DOWNTO 0);
-	--signal ALUResult, MemAddress : STD_LOGIC_VECTOR (7 DOWNTO 0);
-
 begin
    CTRL_UNIT: Controller
    Port map (
         Clk,
         Reset,
-        Start,Lt,
+        Start,Lt, Lo,
         MaxWriteEn, MaxSrc, MinWriteEn, MinSrc, ValueWriteEn,IndexSrc, IndexWriteEn,AddrInWriteEn,AddrInSrc, AddressSrc, ALUOp,
         Done, ResultWriteEn,
         ALUSrcA,ALUSrcB
@@ -59,7 +55,7 @@ begin
           AddressSrc, ALUOp,
           ALUSrcA, ALUSrcB,
           AddressIn, AddressOut, N, DataOut,
-          Lt,
+          Lt, Lo,
           ALUResult, MemAddress
     );
 

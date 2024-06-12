@@ -40,9 +40,9 @@ BEGIN
     BEGIN
         IF RISING_EDGE (Clk) THEN
             IF WriteEn = '1' THEN
-                mem(TO_INTEGER(SIGNED(Address))) <= DataIn;  -- Write data to memory
+                mem(TO_INTEGER(UNSIGNED(Address))) <= DataIn;  -- Write data to memory
             END IF;
-            DataOut <= mem(TO_INTEGER(SIGNED(Address)));  -- Read data from memory
+            DataOut <= mem(TO_INTEGER(UNSIGNED(Address)));  -- Read data from memory
         END IF;
     END PROCESS;
 END ARCHITECTURE Behavioral;

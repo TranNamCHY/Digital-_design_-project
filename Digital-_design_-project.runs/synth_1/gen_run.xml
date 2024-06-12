@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1718178577">
   <File Type="PA-TCL" Name="max_diff.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="max_diff_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="max_diff_reports.tcl"/>
   <File Type="RDS-RDS" Name="max_diff.vds"/>
   <File Type="RDS-UTIL" Name="max_diff_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="max_diff_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="max_diff.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="max_diff_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="max_diff_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/ALU.vhd">
@@ -104,9 +101,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

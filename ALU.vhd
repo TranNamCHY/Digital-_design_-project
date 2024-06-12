@@ -5,7 +5,7 @@ ENTITY ALU IS
     PORT (ALUA, ALUB: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
           ALUOp: IN STD_LOGIC;
           ALUResult: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-          Lt: OUT STD_LOGIC);
+          Lt, Lo: OUT STD_LOGIC);
 END ALU;
 
 ARCHITECTURE Structural OF ALU IS
@@ -16,12 +16,12 @@ ARCHITECTURE Structural OF ALU IS
           Cout: OUT STD_LOGIC);
     END COMPONENT Adder8;
     COMPONENT Mux2 IS
-        GENERIC ( N : Integer := 8);
+        GENERIC ( DATA_WIDTH : Integer := 8);
         Port (
-            D0     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);  -- Input A
-            D1     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);  -- Input B
+            D0     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);  -- Input A
+            D1     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);  -- Input B
             S   : in  STD_LOGIC;  -- Select signal
-            Y     : out STD_LOGIC_VECTOR ( N - 1 downto 0)  -- Output Y
+            Y     : out STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0)  -- Output Y
         );
     END COMPONENT Mux2;
     
@@ -39,5 +39,6 @@ BEGIN
     SignASumNeq <= ALUA(7) XOR Sum(7);
     Overflow <= SignABEq AND SignASumNeq;
     Lt <= Neg XOR Overflow;
-
+    Lo <= NOT Cout;
+    
 END Structural;

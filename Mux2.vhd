@@ -3,12 +3,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Entity declaration for the 2-to-1 MUX
 entity Mux2 is
-    GENERIC ( N : Integer := 8);
+    GENERIC ( DATA_WIDTH : Integer := 8);
     Port (
-        D0     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);  -- Input A
-        D1     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);  -- Input B
+        D0     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);  -- Input A
+        D1     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);  -- Input B
         S   : in  STD_LOGIC;  -- Select signal
-        Y     : out STD_LOGIC_VECTOR ( N - 1 downto 0)  -- Output Y
+        Y     : out STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0)  -- Output Y
     );
 end Mux2;
 

@@ -47,16 +47,16 @@ BEGIN
         Reset <= '0';
         WAIT FOR clk_t;
         Start <= '1';
-        N <= 8D"32";
-        AddressIn <= 8D"3";
-        AddressOut <= 8D"38";
+        N <= 8D"255";
+        AddressIn <= 8D"0";
+        AddressOut <= 8D"255";
         WAIT FOR 2 * clk_t;
         Start <= '0';
         
         WAIT UNTIL RISING_EDGE (Done);
         
         
-        
+   
         WAIT;
     END PROCESS;
 END ARCHITECTURE Behavioral;
