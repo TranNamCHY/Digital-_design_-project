@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Jun 12 14:49:43 2024
+# Process ID: 6344
+# Current directory: C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.runs/synth_1
+# Command line: vivado.exe -log max_diff.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source max_diff.tcl
+# Log file: C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.runs/synth_1/max_diff.vds
+# Journal file: C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.runs/synth_1\vivado.jou
+# Running On: LAPTOP-93A21ICM, OS: Windows, CPU Frequency: 2795 MHz, CPU Physical cores: 8, Host memory: 16407 MB
+#-----------------------------------------------------------
+source max_diff.tcl -notrace

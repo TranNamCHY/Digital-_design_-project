@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="max_diff_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="max_diff_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="700.707 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="344"></NameColumnWidth>
+      <ValueColumnWidth column_width="244"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/max_diff_tb/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/Start" type="logic">
+      <obj_property name="ElementShortName">Start</obj_property>
+      <obj_property name="ObjectShortName">Start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/Reset" type="logic">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/Done" type="logic">
+      <obj_property name="ElementShortName">Done</obj_property>
+      <obj_property name="ObjectShortName">Done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/ResultWriteEn" type="logic">
+      <obj_property name="ElementShortName">ResultWriteEn</obj_property>
+      <obj_property name="ObjectShortName">ResultWriteEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/N" type="array">
+      <obj_property name="ElementShortName">N[7:0]</obj_property>
+      <obj_property name="ObjectShortName">N[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/DataOut" type="array">
+      <obj_property name="ElementShortName">DataOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DataOut[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/AddressOut" type="array">
+      <obj_property name="ElementShortName">AddressOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">AddressOut[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/AddressIn" type="array">
+      <obj_property name="ElementShortName">AddressIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">AddressIn[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/MemAddress" type="array">
+      <obj_property name="ElementShortName">MemAddress[7:0]</obj_property>
+      <obj_property name="ObjectShortName">MemAddress[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/ALUResult" type="array">
+      <obj_property name="ElementShortName">ALUResult[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResult[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/clk_t" type="other">
+      <obj_property name="ElementShortName">clk_t</obj_property>
+      <obj_property name="ObjectShortName">clk_t</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/half_clk_t" type="other">
+      <obj_property name="ElementShortName">half_clk_t</obj_property>
+      <obj_property name="ObjectShortName">half_clk_t</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/dut/DATAPATH_UNIT/max_reg/Q" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+      <obj_property name="label">Max</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/max_diff_tb/dut/DATAPATH_UNIT/min_reg/Q" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+      <obj_property name="label">Min</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,16 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/admin/Desktop/project/Digital-_design_-project/ALU.vhd,1717412841,vhdl,,,,alu,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/Adder8.vhd,1717411732,vhdl,,,,adder8,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/Controller.vhd,1717410056,vhdl,,,,controller,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/Datapath.vhd,1717415337,vhdl,,,,datapath,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/FullAdder.vhd,1717411119,vhdl,,,,fulladder,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/HalfAdder.vhd,1717410711,vhdl,,,,halfadder,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/MaxDiff.vhd,1717467755,vhdl,,,,maxdiff,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/MaxDiff_tb.vhd,1717468826,vhdl,,,,maxdiff_tb,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/Memory.vhd,1717468963,vhdl,,,,memory,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/Mux2.vhd,1717410056,vhdl,,,,mux2,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/Mux4.vhd,1717410056,vhdl,,,,mux4,,,,,,,,
+C:/Users/admin/Desktop/project/Digital-_design_-project/Reg.vhd,1717410056,vhdl,,,,reg,,,,,,,,
