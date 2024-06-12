@@ -8,30 +8,29 @@ ENTITY Datapath IS
           AddressSrc, ALUOp: IN STD_LOGIC;
           ALUSrcA, ALUSrcB: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
           AddressIn, AddressOut, N, DataOut: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-          Lt: OUT STD_LOGIC;
-          ALUResult, MemAddress: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-	  TestMax,TestMin,TestValue,TestIdex,TestAddr: out STD_LOGIC_VECTOR (7 DOWNTO 0));
+          Lt, Lo: OUT STD_LOGIC;
+          ALUResult, MemAddress: OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
 END Datapath;
 
 ARCHITECTURE Structural OF Datapath IS
     COMPONENT Mux2 IS
-        GENERIC ( N : Integer := 8);
+        GENERIC ( DATA_WIDTH : Integer := 8);
         Port (
-            D0     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);  -- Input A
-            D1     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);  -- Input B
+            D0     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);  -- Input A
+            D1     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);  -- Input B
             S   : in  STD_LOGIC;  -- Select signal
-            Y     : out STD_LOGIC_VECTOR ( N - 1 downto 0)  -- Output Y
+            Y     : out STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0)  -- Output Y
         );
     END COMPONENT Mux2;
     COMPONENT Mux4 IS
-        GENERIC ( N : Integer := 8);
+        GENERIC ( DATA_WIDTH : Integer := 8);
         Port (
-            D0     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);
-            D1     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);
-            D2     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);
-            D3     : in  STD_LOGIC_VECTOR ( N - 1 downto 0);
+            D0     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);
+            D1     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);
+            D2     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);
+            D3     : in  STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0);
             S   : in  STD_LOGIC_VECTOR( 1 downto 0 );  -- Select signal
-            Y     : out STD_LOGIC_VECTOR ( N - 1 downto 0)  -- Output Y
+            Y     : out STD_LOGIC_VECTOR ( DATA_WIDTH - 1 downto 0)  -- Output Y
         );
     END COMPONENT Mux4;
     COMPONENT Reg IS
@@ -47,7 +46,7 @@ ARCHITECTURE Structural OF Datapath IS
         PORT (ALUA, ALUB: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
               ALUOp: IN STD_LOGIC;
               ALUResult: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-              Lt: OUT STD_LOGIC);
+              Lt, Lo: OUT STD_LOGIC);
     END COMPONENT ALU;
     SIGNAL MaxD, MinD, IndexD, AddrInD: STD_LOGIC_VECTOR (7 DOWNTO 0);
     SIGNAL Max, Min, Index, AddrIn, Value, ALUA, ALUB: STD_LOGIC_VECTOR (7 DOWNTO 0);
@@ -55,34 +54,29 @@ ARCHITECTURE Structural OF Datapath IS
 BEGIN
     max_reg: Reg PORT MAP (Clk => Clk, Reset => Reset,
                 Enable => MaxWriteEn, D => MaxD, Q => Max);
-    TestMax <= Max;
     max_mux: Mux2 PORT MAP (D0 => "10000000", D1 => Value,
                 S => MaxSrc, Y => MaxD);
     min_reg: Reg PORT MAP (Clk => Clk, Reset => Reset,
                 Enable => MinWriteEn, D => MinD, Q => Min);
-    TestMin <= Min;
     min_mux: Mux2 PORT MAP (D0 => "01111111", D1 => Value,
                 S => MinSrc, Y => MinD);
     index_reg: Reg PORT MAP (Clk => Clk, Reset => Reset,
                 Enable => IndexWriteEn, D => IndexD, Q => Index);
-    TestIdex <= Index;
     index_mux: Mux2 PORT MAP (D0 => "00000000", D1 => ALUResultSig,
                 S => IndexSrc, Y => IndexD);
     addrin_reg: Reg PORT MAP (Clk => Clk, Reset => Reset,
                 Enable => AddrInWriteEn, D => AddrInD, Q => AddrIn);
-    TestAddr <= AddrIn;
     addrin_mux: Mux2 PORT MAP (D0 => AddressIn, D1 => ALUResultSig,
                 S => AddrInSrc, Y => AddrInD);
     memaddr_mux: Mux2 PORT MAP (D0 => AddrIn, D1 => AddressOut,
                 S => AddressSrc, Y => MemAddress);
     value_reg: Reg PORT MAP (Clk => Clk, Reset => Reset,
                 Enable => ValueWriteEn, D => DataOut, Q => Value);
-    TestValue <= Value;
     alua_mux: Mux4 PORT MAP (D0 => Index, D1 => AddrIn,
                 D2 => Max, D3 => Value, S => ALUSrcA, Y => ALUA);
     alub_mux: Mux4 PORT MAP (D0 => N, D1 => "00000001",
                 D2 => Min, D3 => Value, S => ALUSrcB, Y => ALUB);
     alu_i: ALU PORT MAP (ALUA => ALUA, ALUB => ALUB, ALUOp => ALUOp,
-                ALUResult => ALUResultSig, Lt => Lt);
+                ALUResult => ALUResultSig, Lt => Lt, Lo => Lo);
     ALUResult <= ALUResultSig;
 END Structural;

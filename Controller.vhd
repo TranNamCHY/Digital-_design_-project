@@ -7,7 +7,7 @@ entity Controller is
     Port (
         Clk : in STD_LOGIC;
         Reset : in STD_LOGIC;
-        Start,Lt : in STD_LOGIC;
+        Start, Lt, Lo : in STD_LOGIC;
         MaxWriteEn, MaxSrc, MinWriteEn, MinSrc, ValueWriteEn,IndexSrc, IndexWriteEn,AddrInWriteEn,AddrInSrc, AddressSrc, ALUOp : out STD_LOGIC;
         Done, ResultWriteEn : out STD_LOGIC;
         ALUSrcA, ALUSrcB : out std_logic_vector ( 1 downto 0)
@@ -72,7 +72,7 @@ begin
             when S11 =>
                     next_state <= S12;
             when S12 =>
-                if( Lt = '1') then
+                if( Lo = '1') then
                     next_state <= S2;
                 else 
                     next_state <= S13;
