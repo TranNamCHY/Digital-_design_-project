@@ -1,0 +1,94 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Wed Jun 12 14:53:19 2024
+| Host         : LAPTOP-93A21ICM running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file max_diff_control_sets_placed.rpt
+| Design       : max_diff
+| Device       : xc7k70t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    76 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    16 |
+| >= 0 to < 4        |    10 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              14 |           11 |
+| No           | No                    | Yes                    |              22 |            6 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              32 |            9 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+----------------------------------------+------------------+------------------+----------------+--------------+
+|             Clock Signal             |              Enable Signal             | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------+----------------------------------------+------------------+------------------+----------------+--------------+
+|  CTRL_UNIT/AddrInWriteEn_reg_i_2_n_0 |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/AddrInWriteEn_reg_i_1_n_0 |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/IndexSrc_reg_i_1_n_0      |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/IndexWriteEn_reg_i_1_n_0  |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/AddressSrc_reg_i_1_n_0    |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/MinWriteEn_reg_i_1_n_0    |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/ResultWriteEn_reg_i_1_n_0 |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/MinWriteEn_reg_i_2_n_0    |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/MaxWriteEn_reg_i_2_n_0    |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/MaxWriteEn_reg_i_1_n_0    |                                        |                  |                1 |              1 |         1.00 |
+|  CTRL_UNIT/ALUOp_reg_i_2_n_0         |                                        |                  |                1 |              4 |         4.00 |
+|  Clk_IBUF_BUFG                       | CTRL_UNIT/E[0]                         | Reset_IBUF       |                2 |              8 |         4.00 |
+|  Clk_IBUF_BUFG                       | CTRL_UNIT/FSM_onehot_state_reg[1]_2[0] | Reset_IBUF       |                2 |              8 |         4.00 |
+|  Clk_IBUF_BUFG                       | CTRL_UNIT/FSM_onehot_state_reg[1]_1[0] | Reset_IBUF       |                3 |              8 |         2.67 |
+|  Clk_IBUF_BUFG                       | CTRL_UNIT/FSM_onehot_state_reg[1]_0[0] | Reset_IBUF       |                2 |              8 |         4.00 |
+|  Clk_IBUF_BUFG                       |                                        | Reset_IBUF       |                6 |             22 |         3.67 |
++--------------------------------------+----------------------------------------+------------------+------------------+----------------+--------------+
+
+

@@ -1,0 +1,17 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../ALU.vhd" \
+"../../../../Adder8.vhd" \
+"../../../../Controller.vhd" \
+"../../../../Datapath.vhd" \
+"../../../../FullAdder.vhd" \
+"../../../../HalfAdder.vhd" \
+"../../../../Memory2.vhd" \
+"../../../../Mux2.vhd" \
+"../../../../Mux4.vhd" \
+"../../../../Reg.vhd" \
+"../../../../max_diff.vhd" \
+"../../../../max_diff_tb.vhd" \
+
+# Do not sort compile order
+nosort
