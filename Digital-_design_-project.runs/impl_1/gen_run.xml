@@ -18,10 +18,14 @@
   <File Type="BITSTR-MMI" Name="max_diff.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="max_diff_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="max_diff.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="max_diff_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="max_diff.ltx"/>
+  <File Type="BOOT-PDI-FILE" Name="max_diff_boot.pdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="NPI_FILE" Name="max_diff.npi"/>
   <File Type="OPT-DRC" Name="max_diff_drc_opted.rpt"/>
+  <File Type="RBD_FILE" Name="max_diff.rbd"/>
   <File Type="OPT-HWDEF" Name="max_diff.hwdef"/>
   <File Type="PLACE-IO" Name="max_diff_io_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="max_diff_utilization_placed.rpt"/>
@@ -55,17 +59,13 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="max_diff_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="max_diff_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="max_diff_bus_skew_postroute_physopted.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="max_diff_methodology_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="max_diff_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="max_diff_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="max_diff.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="max_diff_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="max_diff_pld.pdi"/>
   <File Type="RCFI_FILE" Name="max_diff.rcfi"/>
   <File Type="CFI_FILE" Name="max_diff.cfi"/>
   <File Type="RNPI_FILE" Name="max_diff.rnpi"/>
-  <File Type="NPI_FILE" Name="max_diff.npi"/>
-  <File Type="RBD_FILE" Name="max_diff.rbd"/>
   <File Type="ROUTE-RQS" Name="max_diff_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="max_diff_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>

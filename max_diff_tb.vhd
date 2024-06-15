@@ -64,7 +64,7 @@ BEGIN
         Reset <= '1';
         WAIT FOR clk_t;
         Reset <= '0';
-        WAIT FOR clk_t;
+        WAIT FOR clk_t / 10;
         Start <= '1';
         N <= "11111111";
         AddressIn <= "00000000";

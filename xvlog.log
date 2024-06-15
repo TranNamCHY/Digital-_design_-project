@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb.vhd" into library work
+ERROR: [VRFC 10-4982] syntax error near 'ALL' [C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb.vhd:2]
+ERROR: [VRFC 10-4982] syntax error near 'IS' [C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb.vhd:4]
+ERROR: [VRFC 10-4982] syntax error near 'OF' [C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb.vhd:7]
+ERROR: [VRFC 10-4982] syntax error near ':' [C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb.vhd:9]
+ERROR: [VRFC 10-4982] syntax error near 'max_diff' [C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb.vhd:14]
+ERROR: [VRFC 10-4982] syntax error near 'IS' [C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb.vhd:15]
+ERROR: [VRFC 10-4982] syntax error near 'IN' [C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb.vhd:17]

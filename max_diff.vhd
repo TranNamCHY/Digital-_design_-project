@@ -37,7 +37,7 @@ architecture structural of max_diff is
         signal MaxWriteEn, MaxSrc, MinWriteEn, MinSrc, ValueWriteEn,IndexSrc, IndexWriteEn,AddrInWriteEn,AddrInSrc, AddressSrc, ALUOp : STD_LOGIC;
         signal ALUSrcA, ALUSrcB : std_logic_vector ( 1 downto 0);
 begin
-   CTRL_UNIT: Controller
+   CTRL_UNIT: Entity work.Controller(Behavioral)
    Port map (
         Clk,
         Reset,

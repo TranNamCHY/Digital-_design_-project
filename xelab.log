@@ -1,0 +1,6 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe 
+Multi-threading is on. Using 6 slave threads.
+ERROR: [XSIM 43-3275] No design top(s) specified.
