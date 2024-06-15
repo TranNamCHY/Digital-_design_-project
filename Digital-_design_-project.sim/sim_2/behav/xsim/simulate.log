@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Jun 13 23:55:33 2024
-# Process ID: 16796
+# Start of session at: Sat Jun 15 16:38:00 2024
+# Process ID: 23448
 # Current directory: C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.sim/sim_2/behav/xsim
 # Command line: xsim.exe -log simulate.log -mode tcl -source {xsim.dir/max_diff_tb2_behav/xsim_script.tcl}
 # Log file: C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.sim/sim_2/behav/xsim/simulate.log
@@ -27,9 +27,9 @@ source max_diff_tb2.tcl
 ## }
 ## run 1000ns
 run 24000ns
-Note: Result = 147
+Note: Result = 62
 Time: 23066 ns  Iteration: 0  Process: /max_diff_tb2/line__45  File: C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.srcs/sim_2/new/max_diff_tb2.vhd
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting xsim at Thu Jun 13 23:55:36 2024...
+INFO: [Common 17-206] Exiting xsim at Sat Jun 15 16:38:03 2024...

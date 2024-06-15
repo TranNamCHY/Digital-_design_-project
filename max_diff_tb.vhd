@@ -1,7 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.NUMERIC_STD.ALL;
-
+use IEEE.STD_LOGIC_TEXTIO.ALL;
+use std.textio.all;
 ENTITY max_diff_tb IS
 END ENTITY max_diff_tb;
 
@@ -24,13 +24,29 @@ ARCHITECTURE Behavioral OF max_diff_tb IS
     SIGNAL N, DataOut, AddressOut, AddressIn, MemAddress, ALUResult: STD_LOGIC_VECTOR (7 DOWNTO 0);
     CONSTANT clk_t: TIME := 10 NS;
     CONSTANT half_clk_t: TIME := clk_t / 2;
+    file output_file : text open write_mode is "output.txt";
+
+    -- Function to convert std_logic_vector to string for display, dont need care about it
+    function std_logic_vector_to_string(vector: std_logic_vector) return string is
+        variable result : string(1 to vector'length);
+    begin
+        for i in vector'range loop
+            if vector(i) = '1' then
+                result(9-(i+1)) := '1';
+            else
+                result(9-(i+1)) := '0';
+            end if;
+        end loop;
+        return result;
+    end function;
+
 BEGIN
     dut: max_diff PORT MAP (Clk => Clk, Reset => Reset,
                     Start => Start, N => N, DataOut => DataOut,
                     AddressOut => AddressOut, AddressIn => AddressIn,
                     Done => Done, ResultWriteEn => ResultWriteEn,
                     MemAddress => MemAddress, ALUResult => ALUResult);
-    memory_i: Memory2 GENERIC MAP (filename => "C:/Users/admin/Desktop/project/Digital-_design_-project/mem.dat")
+    memory_i: Memory2 GENERIC MAP (filename => "test.dat")
                       PORT MAP (Clk => Clk, Address => MemAddress,
                             WriteEn => ResultWriteEn, DataIn => ALUResult,
                             DataOut => DataOut);
@@ -42,23 +58,25 @@ BEGIN
         WAIT FOR half_clk_t;
     END PROCESS;
     
-    PROCESS BEGIN
+    simu: PROCESS 
+	variable line_buffer : line;
+	BEGIN
         Reset <= '1';
         WAIT FOR clk_t;
         Reset <= '0';
         WAIT FOR clk_t / 10;
         Start <= '1';
-        N <= 8D"255";
-        AddressIn <= 8D"0";
-        AddressOut <= 8D"255";
+        N <= "11111111";
+        AddressIn <= "00000000";
+        AddressOut <= "11111111";
         WAIT FOR 2 * clk_t;
         Start <= '0';
         
         WAIT UNTIL RISING_EDGE (Done);
-        WAIT FOR clk_t / 10;
-        
-        REPORT "Result = " & INTEGER'IMAGE(TO_INTEGER(UNSIGNED(ALUResult)));
-   
+	WAIT FOR clk_t;
+	write(line_buffer,std_logic_vector_to_string(ALUResult));
+        writeline(output_file,line_buffer);
+   	file_close(output_file);
         WAIT;
     END PROCESS;
 END ARCHITECTURE Behavioral;
