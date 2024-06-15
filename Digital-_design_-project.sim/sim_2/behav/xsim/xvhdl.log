@@ -1,2 +1,24 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/Memory.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/Adder8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Adder8'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/Controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/Datapath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Datapath'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/FullAdder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FullAdder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/HalfAdder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'HalfAdder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/Memory2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Memory2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/Mux2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Mux2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/Mux4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Mux4'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/Reg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Reg'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'max_diff'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.srcs/sim_2/new/max_diff_tb2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'max_diff_tb2'

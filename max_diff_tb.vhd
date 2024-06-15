@@ -1,5 +1,6 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
 
 ENTITY max_diff_tb IS
 END ENTITY max_diff_tb;
@@ -45,7 +46,7 @@ BEGIN
         Reset <= '1';
         WAIT FOR clk_t;
         Reset <= '0';
-        WAIT FOR clk_t;
+        WAIT FOR clk_t / 10;
         Start <= '1';
         N <= 8D"255";
         AddressIn <= 8D"0";
@@ -54,8 +55,9 @@ BEGIN
         Start <= '0';
         
         WAIT UNTIL RISING_EDGE (Done);
+        WAIT FOR clk_t / 10;
         
-        
+        REPORT "Result = " & INTEGER'IMAGE(TO_INTEGER(UNSIGNED(ALUResult)));
    
         WAIT;
     END PROCESS;

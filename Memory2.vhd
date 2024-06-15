@@ -34,7 +34,7 @@ ARCHITECTURE Behavioral OF Memory2 IS
         RETURN mem_data;
     END FUNCTION;
     
-    SIGNAL mem : mem_array := init_mem("C:/Users/admin/Desktop/project/Digital-_design_-project/mem.dat");  -- Initialize memory to all 
+    SIGNAL mem : mem_array := init_mem(filename );  -- Initialize memory to all 
 BEGIN
     PROCESS (Clk)
     BEGIN

@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Jun 13 17:23:41 2024
+# Process ID: 18804
+# Current directory: C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.sim/sim_1/behav/xsim
+# Command line: xsim.exe -log simulate.log -mode tcl -source {xsim.dir/max_diff_tb_behav/xsim_script.tcl}
+# Log file: C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.sim/sim_1/behav/xsim/simulate.log
+# Journal file: C:/Users/admin/Desktop/project/Digital-_design_-project/Digital-_design_-project.sim/sim_1/behav/xsim\xsim.jou
+# Running On: LAPTOP-93A21ICM, OS: Windows, CPU Frequency: 2795 MHz, CPU Physical cores: 8, Host memory: 16407 MB
+#-----------------------------------------------------------
+source xsim.dir/max_diff_tb_behav/xsim_script.tcl
+# xsim {max_diff_tb_behav} -view {{C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb_behav.wcfg}} -tclbatch {max_diff_tb.tcl} -key {Behavioral:sim_1:Functional:max_diff_tb}
+Time resolution is 1 ps
+open_wave_config C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb_behav.wcfg
+source max_diff_tb.tcl
+## set curr_wave [current_wave_config]
+## if { [string length $curr_wave] == 0 } {
+##   if { [llength [get_objects]] > 0} {
+##     add_wave /
+##     set_property needs_save false [current_wave_config]
+##   } else {
+##      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+##   }
+## }
+## run 1000ns
+xsim% run 24000ns
+Note: Result = 200
+Time: 23156 ns  Iteration: 0  Process: /max_diff_tb/line__45  File: C:/Users/admin/Desktop/project/Digital-_design_-project/max_diff_tb.vhd
+xsim% close_sim
+INFO: [Simtcl 6-16] Simulation closed
+xsim% exit
+INFO: [Common 17-206] Exiting xsim at Thu Jun 13 17:23:59 2024...

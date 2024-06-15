@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Jun 13 16:22:31 2024
+# Process ID: 16688
+# Current directory: C:/Users/admin/Desktop/project/Digital-_design_-project
+# Command line: vivado.exe -mode tcl maxdiff.tcl
+# Log file: C:/Users/admin/Desktop/project/Digital-_design_-project/vivado.log
+# Journal file: C:/Users/admin/Desktop/project/Digital-_design_-project\vivado.jou
+# Running On: LAPTOP-93A21ICM, OS: Windows, CPU Frequency: 2795 MHz, CPU Physical cores: 8, Host memory: 16407 MB
+#-----------------------------------------------------------
+open_project maxdiff.tcl
+ERROR: [Coretcl 2-1982] Invalid project file name. File must have a valid project extension (.ppr/.xpr). Provided: maxdiff.tcl
+Vivado% INFO: [Common 17-206] Exiting Vivado at Thu Jun 13 16:22:49 2024...

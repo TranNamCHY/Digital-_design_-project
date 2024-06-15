@@ -5,26 +5,4 @@ Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_textio
-Compiling architecture behavioral of entity xil_defaultlib.Controller [controller_default]
-Compiling architecture rtl of entity xil_defaultlib.Reg [reg_default]
-Compiling architecture dataflow of entity xil_defaultlib.Mux2 [mux2_default]
-Compiling architecture dataflow of entity xil_defaultlib.Mux4 [mux4_default]
-Compiling architecture dataflow of entity xil_defaultlib.HalfAdder [halfadder_default]
-Compiling architecture structural of entity xil_defaultlib.FullAdder [fulladder_default]
-Compiling architecture structural of entity xil_defaultlib.Adder8 [adder8_default]
-Compiling architecture structural of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture structural of entity xil_defaultlib.Datapath [datapath_default]
-Compiling architecture structural of entity xil_defaultlib.max_diff [max_diff_default]
-Compiling architecture behavioral of entity xil_defaultlib.Memory2 [\Memory2(filename="C:/Users/admi...]
-Compiling architecture behavioral of entity xil_defaultlib.max_diff_tb
-Built simulation snapshot max_diff_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
